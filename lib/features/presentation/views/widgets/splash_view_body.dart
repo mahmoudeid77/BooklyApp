@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/utilis/assets.dart';
+import 'package:flutter_application_1/features/home/presentation/views/home_view.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-class SplashViewBody extends StatelessWidget {
+class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
   @override
+  State<SplashViewBody> createState() => _SplashViewBodyState();
+}
+
+class _SplashViewBodyState extends State<SplashViewBody> {
+  @override
+  void initState() {
+    
+    super.initState();
+    Future.delayed(const Duration(seconds: 5),(){
+      Get.to(() => HomeView(),transition: Transition.fadeIn,duration: Duration(milliseconds: 500));
+    });
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
