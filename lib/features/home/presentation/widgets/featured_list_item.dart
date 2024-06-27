@@ -8,7 +8,7 @@ class FeaturedListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 5),
+      margin: EdgeInsets.symmetric(horizontal: 5,),
       height: 200,
       width: 150,
   decoration: BoxDecoration(

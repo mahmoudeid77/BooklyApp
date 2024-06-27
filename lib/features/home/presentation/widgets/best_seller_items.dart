@@ -8,30 +8,33 @@ class BestSellerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          width: 100,
-          height: 150,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Colors.white,
-           image: DecorationImage(image: AssetImage(AssetsData.bookImage), fit: BoxFit.cover),
-            ),
-        ),
-        SizedBox(width: 20,),
-        Expanded(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Harry Potter and the Deathly Hallows',style: AppStyles.textStyle18,maxLines: null,overflow: TextOverflow.visible,),
-              Text('J.K. Rowling',style: AppStyles.textStyle14,),
-              EvaluationRow()
-              ],
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Row(
+        children: [
+          Container(
+            width: 100,
+            height: 150,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.white,
+             image: DecorationImage(image: AssetImage(AssetsData.bookImage), fit: BoxFit.cover),
+              ),
           ),
-        )
-      ],
+          SizedBox(width: 20,),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Harry Potter and the Deathly Hallows',style: AppStyles.textStyle18,maxLines: null,overflow: TextOverflow.visible,),
+                Text('J.K. Rowling',style: AppStyles.textStyle14,),
+                EvaluationRow()
+                ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

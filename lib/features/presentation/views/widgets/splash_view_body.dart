@@ -16,7 +16,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     
     super.initState();
     Future.delayed(const Duration(seconds: 5),(){
-      Get.to(() => HomeView(),transition: Transition.fadeIn,duration: Duration(milliseconds: 500));
+      Get.to(() => HomeView(),transition: Transition.leftToRight,duration: Duration(milliseconds: 2000));
     });
   }
   Widget build(BuildContext context) {
