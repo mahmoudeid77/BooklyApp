@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/features/home/presentation/widgets/book_cover.dart';
 import 'package:flutter_application_1/features/home/presentation/widgets/custom_appbar_book_details.dart';
 
 class BookDetails extends StatelessWidget {
@@ -10,7 +11,8 @@ class BookDetails extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            CustomAppbarBookDetails()
+            CustomAppbarBookDetails(),
+            BookCover()
           ],
         ),
       ),
