@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/features/home/presentation/widgets/list_of_best_seller_items_view.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -9,7 +10,7 @@ class SearchViewBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(
               children: [
                 TextField(
@@ -25,6 +26,9 @@ class SearchViewBody extends StatelessWidget {
               ],
             ),
           ),
+        ),
+        SliverToBoxAdapter(
+          child: ListOfBestSellerItemsView(),
         )
       ],
     );
