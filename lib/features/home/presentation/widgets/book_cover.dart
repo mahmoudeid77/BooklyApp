@@ -12,9 +12,9 @@ class BookCover extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Colors.white,
-        image: DecorationImage(image: AssetImage(AssetsData.bookImage), fit: BoxFit.cover),
-        ),
-      );
-    
+        image: DecorationImage(
+            image: AssetImage(AssetsData.bookImage), fit: BoxFit.cover),
+      ),
+    );
   }
 }

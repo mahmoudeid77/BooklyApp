@@ -15,14 +15,11 @@ class SearchViewBody extends StatelessWidget {
               children: [
                 TextField(
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.search),
-                    hintText: 'Search',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10)
-                    )
-                  ),
+                      prefixIcon: Icon(Icons.search),
+                      hintText: 'Search',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10))),
                 )
-            
               ],
             ),
           ),

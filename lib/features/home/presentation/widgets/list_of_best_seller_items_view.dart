@@ -8,13 +8,12 @@ class ListOfBestSellerItemsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
-        itemCount: 12,
-        itemBuilder: (context,index){
-        
-        return BestSellerItem();
-      }),
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          itemCount: 12,
+          itemBuilder: (context, index) {
+            return BestSellerItem();
+          }),
     );
   }
 }

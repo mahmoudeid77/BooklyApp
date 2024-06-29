@@ -17,23 +17,32 @@ class HomeViewBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: Padding(
-           padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomAppBar(),
-                SizedBox(height: 10,),
                 SizedBox(
-                  height: 250,
-                  child: FeaturedBooksListView(flag: true,)),
-                  SizedBox(height: 30,),
-                 Text('Best Seller',style: AppStyles.textStyle20,),
-                 SizedBox(height: 20,),
-
+                  height: 10,
+                ),
+                SizedBox(
+                    height: 250,
+                    child: FeaturedBooksListView(
+                      flag: true,
+                    )),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  'Best Seller',
+                  style: AppStyles.textStyle20,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           ),
-
         ),
         SliverToBoxAdapter(
           child: ListOfBestSellerItemsView(),
@@ -45,8 +54,6 @@ class HomeViewBody extends StatelessWidget {
         //   ),
         // ),
       ],
-    ) ;
+    );
   }
 }
-
-

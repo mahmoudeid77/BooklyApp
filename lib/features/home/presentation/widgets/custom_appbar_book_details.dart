@@ -9,14 +9,22 @@ class CustomAppbarBookDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(onPressed: (){
-          Get.off(HomeView());
-        },
-         icon: Icon(Icons.arrow_back,size: 30,),),
-
+        IconButton(
+          onPressed: () {
+            Get.off(HomeView());
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            size: 30,
+          ),
+        ),
         Spacer(),
-
-        IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart_checkout_outlined ,size: 30,))
+        IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.shopping_cart_checkout_outlined,
+              size: 30,
+            ))
       ],
     );
   }

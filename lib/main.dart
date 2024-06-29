@@ -17,11 +17,10 @@ class BooklyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-            scaffoldBackgroundColor: kPrimaryColor,
-              textTheme: GoogleFonts.montserratAlternatesTextTheme(ThemeData.dark().textTheme),
-          ),
-   
-          
+        scaffoldBackgroundColor: kPrimaryColor,
+        textTheme: GoogleFonts.montserratAlternatesTextTheme(
+            ThemeData.dark().textTheme),
+      ),
       home: SplashView(),
     );
   }

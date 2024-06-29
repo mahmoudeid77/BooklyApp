@@ -9,13 +9,22 @@ class SecondEvaluationRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-      
-        const Icon(Icons.star,size: 20,color: Colors.yellow,),
-        Text('4.5',style: AppStyles.textStyle18,),
-        
-        
-        const SizedBox(width: 5,),
-        Text('(250)',style: AppStyles.textStyle18,),
+        const Icon(
+          Icons.star,
+          size: 20,
+          color: Colors.yellow,
+        ),
+        Text(
+          '4.5',
+          style: AppStyles.textStyle18,
+        ),
+        const SizedBox(
+          width: 5,
+        ),
+        Text(
+          '(250)',
+          style: AppStyles.textStyle18,
+        ),
       ],
     );
   }

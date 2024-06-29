@@ -15,52 +15,67 @@ class BookDetails extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: Column(
-            //crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              CustomAppbarBookDetails(),
-              BookCover(),
-              SizedBox(height: 20,),
-              Text('Soul',style: AppStyles.textStyle30,),
-              SizedBox(height: 5,),
-              Text('by Markus Zustin',style: AppStyles.textStyle20,),
-              SizedBox(height: 20,),
-              Center(child: SecondEvaluationRow()),
-              SizedBox(height: 20,),
-              BooksAction(),
-               SizedBox(height: 20,),
-               Padding(
-                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                   children: [
-                     Text('You can also like',style: AppStyles.textStyle20,),
-                     
-                   ],
-                 ),
-                 
-               ),
-                 SizedBox(height: 20,),
-              // ListOfBestSellerItemsView()
-          
-            ],
-          ),
-              ),
-             SliverToBoxAdapter(
-              child: SizedBox(
-                height: 170,
-                child: FeaturedBooksListView(flag: false)),
-             )
-            ],
-          )
-        ),
+            padding: const EdgeInsets.all(8.0),
+            child: CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Column(
+                    //crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      CustomAppbarBookDetails(),
+                      BookCover(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        'Soul',
+                        style: AppStyles.textStyle30,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        'by Markus Zustin',
+                        style: AppStyles.textStyle20,
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Center(child: SecondEvaluationRow()),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      BooksAction(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              'You can also like',
+                              style: AppStyles.textStyle20,
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      // ListOfBestSellerItemsView()
+                    ],
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: SizedBox(
+                      height: 170, child: FeaturedBooksListView(flag: false)),
+                )
+              ],
+            )),
       ),
     );
   }
 }
-
