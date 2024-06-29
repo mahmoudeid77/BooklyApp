@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/utilis/assets.dart';
+import 'package:flutter_application_1/features/search/presentation/views/search_view.dart';
+import 'package:get/get.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -12,7 +14,9 @@ class CustomAppBar extends StatelessWidget {
         children: [
           Image.asset(AssetsData.logo,height: 16,),
           Spacer()  ,
-          IconButton(onPressed: (){}, icon: Icon(Icons.search),),
+          IconButton(onPressed: (){
+            Get.to(SearchView());
+          }, icon: Icon(Icons.search),),
         
         ],
       ),
