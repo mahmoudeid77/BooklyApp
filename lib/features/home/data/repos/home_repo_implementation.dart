@@ -1,5 +1,6 @@
 
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter_application_1/core/utilis/api_service.dart';
 import 'package:flutter_application_1/errors/failure.dart';
 import 'package:flutter_application_1/features/home/data/book_model/book_model.dart';
@@ -25,7 +26,10 @@ class HomeRepoImplementation implements HomeRepo{
      return right(books);
      
    } catch (e) {
-    return left(e.toString() as Failure);
+    if(e is DioError){
+      return left(ServerFailure.fromDioError(e));
+    }
+    return left(ServerFailure(e.toString()));
      
    }
     
